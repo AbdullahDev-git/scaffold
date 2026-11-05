@@ -1,0 +1,74 @@
+<!-- 
+  Scaffold — Email Confirmation Template
+  
+  Copy this into Supabase Dashboard → Authentication → Email Templates → Confirm signup
+  Supabase replaces {{ .ConfirmationURL }} with the actual link.
+  The link expires after 24 hours by default (configurable in Authentication → Settings).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirm your Scaffold account</title>
+</head>
+<body style="margin:0;padding:0;background-color:#0f0e0b;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#0f0e0b;padding:40px 20px;">
+    <tr>
+      <td align="center">
+        <table width="100%" cellpadding="0" cellspacing="0" style="max-width:480px;background-color:#1a1916;border-radius:12px;overflow:hidden;">
+          <!-- Header -->
+          <tr>
+            <td style="padding:32px 32px 24px;border-bottom:1px solid #2a2825;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <span style="font-size:20px;font-weight:600;color:#f5f5f4;letter-spacing:-0.02em;">Scaffold</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          <!-- Body -->
+          <tr>
+            <td style="padding:32px;">
+              <h1 style="margin:0 0 12px;font-size:22px;font-weight:600;color:#f5f5f4;letter-spacing:-0.02em;">
+                Confirm your email
+              </h1>
+              <p style="margin:0 0 24px;font-size:15px;color:#a8a29e;line-height:1.6;">
+                You signed up for Scaffold — the tool that turns briefs into client-winning prototypes. Click below to verify your account.
+              </p>
+              
+              <!-- CTA Button -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
+                <tr>
+                  <td align="center">
+                    <a href="{{ .ConfirmationURL }}" style="display:inline-block;background-color:#c7443c;color:#ffffff;font-size:15px;font-weight:600;text-decoration:none;padding:14px 32px;border-radius:8px;letter-spacing:-0.01em;">
+                      Confirm my account
+                    </a>
+                  </td>
+                </tr>
+              </table>
+              
+              <p style="margin:0 0 8px;font-size:13px;color:#78716c;line-height:1.6;">
+                This link expires in <strong style="color:#a8a29e;">15 minutes</strong>. If you didn&apos;t create this account, you can safely ignore this email.
+              </p>
+            </td>
+          </tr>
+          
+          <!-- Footer -->
+          <tr>
+            <td style="padding:20px 32px;border-top:1px solid #2a2825;">
+              <p style="margin:0;font-size:12px;color:#57534e;">
+                Scaffold — pitch prototypes that close deals.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
